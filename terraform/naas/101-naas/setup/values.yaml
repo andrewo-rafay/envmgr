@@ -1,5 +1,5 @@
 ##Rafay Project name
-projectName: UPDATE_EXISTING_PROJECT_NAME
+projectName: andrew-naas
 ## Initial Version for Environment Manager resources.
 version: v1
 ## https://docs.rafay.dev/env_manager/overview/
@@ -15,4 +15,4 @@ NamespaceEnvironmentTemplate: naas-env-tmpl
 #Environment: eks-kubelow-env
 ## Terraform code path 
 tfRepoPathNamespace: terraform/naas/101-naas/terraform/namespace
-ClusterName: UPDATE_EXISTING_CLUSTER_NAME
+ClusterName: naas-cluster-3

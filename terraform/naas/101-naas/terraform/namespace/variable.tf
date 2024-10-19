@@ -17,6 +17,7 @@ variable "username" {
 variable "user_type" {
   description = "Rafay user type (sso or local)"
   type    = string
+  default = "local"
 }
 
 variable "cpu" {
