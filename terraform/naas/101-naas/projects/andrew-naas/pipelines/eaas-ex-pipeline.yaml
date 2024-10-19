@@ -1,0 +1,39 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Pipeline
+metadata:
+  name: eaas-ex-pipeline
+  project: andrew-naas
+spec:
+  active: true
+  stages:
+  - config:
+      destinationRepo: {}
+      gitToSystemSync: true
+      includedResources:
+      - name: Environment
+      - name: EnvironmentTemplate
+      - name: ConfigContext
+      - name: Agent
+      - name: Repository
+      - name: Resource
+      - name: ResourceTemplate
+      - name: Pipeline
+      sourceAsDestination: true
+      sourceRepo:
+        path:
+          name: terraform/naas/101-naas
+        repository: naas-git-repo-2
+        revision: dev
+      systemToGitSync: true
+    name: eaas-sync
+    type: SystemSync
+  triggers:
+  - config:
+      repo:
+        paths:
+        - name: terraform/naas/101-naas
+        provider: Github
+        repository: naas-git-repo-2
+        revision: dev
+    name: eaas-sync-trigger
+    type: Webhook

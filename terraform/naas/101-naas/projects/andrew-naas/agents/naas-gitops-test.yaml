@@ -1,0 +1,11 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: naas-gitops-test
+  project: andrew-naas
+spec:
+  active: true
+  cluster:
+    name: naas-cluster
+  type: Cluster
+  version: r2.10.0

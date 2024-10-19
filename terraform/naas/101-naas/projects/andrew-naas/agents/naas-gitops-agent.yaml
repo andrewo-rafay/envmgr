@@ -1,0 +1,9 @@
+apiVersion: gitops.k8smgmt.io/v3
+kind: Agent
+metadata:
+  name: naas-gitops-agent
+  project: andrew-naas
+spec:
+  active: true
+  type: Docker
+  version: r2.10.0
