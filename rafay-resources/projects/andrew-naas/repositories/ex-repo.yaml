@@ -1,0 +1,15 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: ex-repo
+  project: andrew-naas
+spec:
+  options: {}
+  type: Git
+status:
+  projects:
+  - projectId: k5rw572
+    repositoryId: 2q8wj92
+  webhookConfig:
+    webhookSecret: 04e4d5ad1bf9fa1e3c61db8a356d0ba6c8017dd6c189d04d744e479ab09d919e
+    webhookURL: https://console.rafay.dev/v2/config/webhook/repository/2q8wj92
