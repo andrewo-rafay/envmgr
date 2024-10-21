@@ -42,7 +42,7 @@ sharingtemplates: false
 
 ## list of templates
 templates:
-#  - ../terraform/naas/101-naas
+ - ../terraform/naas/101-naas
 #  - ../terraform/waas/101-waas
 #  - ../terraform/vcluster/101-caas
 #  - ../terraform/aws/101-vpc-ec2
