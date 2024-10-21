@@ -1,0 +1,50 @@
+apiVersion: eaas.envmgmt.io/v1
+kind: EnvironmentTemplate
+metadata:
+  annotations:
+    eaas.envmgmt.io/category: Developer Productivity
+  displayName: Namespace as a Service
+  name: naas-env-tmpl-andrew-naas
+  project: andrew-naas
+spec:
+  agents:
+  - name: eaas-agent-naas
+  resources:
+  - kind: resourcetemplate
+    name: naas-rs-tmpl-andrew-naas
+    resourceOptions:
+      version: v1
+    type: dynamic
+  variables:
+  - name: project
+    options:
+      override:
+        type: allowed
+    value: andrew-naas
+    valueType: text
+  - name: cluster_name
+    options:
+      override:
+        type: allowed
+    value: naas-cluster-3
+    valueType: text
+  - name: username
+    options:
+      override:
+        type: notallowed
+    value: $($glbCtx.username)$
+    valueType: expression
+  - name: user_type
+    options:
+      override:
+        type: notallowed
+    value: $(trigger.payload.is_sso_user)$
+    valueType: expression
+  - name: collaborator
+    options:
+      override:
+        type: allowed
+    value: user_email
+    valueType: text
+  version: v1
+  versionState: active

@@ -1,0 +1,26 @@
+apiVersion: integrations.k8smgmt.io/v3
+kind: Repository
+metadata:
+  name: naas-repo-andrew-naas
+  project: andrew-naas
+spec:
+  agents:
+  - name: eaas-agent-naas
+  credentials:
+    password: sealed://credentials.password
+    username: andrewo-rafay
+  endpoint: https://github.com/andrewo-rafay/envmgr/
+  options: {}
+  secret:
+    name: file://artifacts/naas-repo-andrew-naas/sealed-secret.yaml
+  type: Git
+status:
+  agents:
+  - id: 6knvd8m
+    name: eaas-agent-naas
+  projects:
+  - projectId: k5rw572
+    repositoryId: 2wq6l62
+  webhookConfig:
+    webhookSecret: 71cf0a60a56f40d9c7db07e348557334420c3d1a17aadf797e69ba28db9a6681
+    webhookURL: https://console.rafay.dev/v2/config/webhook/repository/2wq6l62
