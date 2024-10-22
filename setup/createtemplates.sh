@@ -4,11 +4,11 @@
 API_KEY=""
 PROJECT_NAME=""
 MAIN_YAML="$PWD/setup/values.yaml"
-TEMPLATE_FOLDER="$PWD/terraform/naas/101-naas/setup/templates"
+TEMPLATE_FOLDER="$PWD/terraform/naas/setup/templates"
 
 PROJECT_NAME_FIELD="projectName"
 
-sed "s/^$PROJECT_NAME_FIELD: .*$/$PROJECT_NAME_FIELD: $PROJECT_NAME/" $PWD/values.yaml > $PWD/tmp.yaml
+sed "s/^$PROJECT_NAME_FIELD: .*$/$PROJECT_NAME_FIELD: $PROJECT_NAME/" $PWD/setup/values.yaml > $PWD/setup/tmp.yaml
 
 
 function apply_templates {
